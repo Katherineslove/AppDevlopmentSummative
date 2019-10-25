@@ -93,6 +93,7 @@ app.post('/listing', upload.single('uploadImage'),function(req, res){
 
 app.get('/allListings', function(req, res) {
   Listing.find().then(result => {
+    console.log(result);
     res.send(result);
   }).catch(err => res.send(err));
 });
